@@ -24,7 +24,9 @@ public class Carro {
         if (this.motor.getQuilometragem()==0)
             consumoMotor = 20;
         else{
-            
+            while (consumoMotor>=10){
+                consumoMotor = motor.getQuilometragem()/5000;
+            }
         }
     }
 
