@@ -5,6 +5,8 @@ public class App {
 
         // Comentário inserido no branch 'alteracao'
 
+        // Último comentário
+
         Carro basico = new Carro("Basico", TipoCombustivel.GASOLINA, 10, 55);
 
         // Adicionando carros...
