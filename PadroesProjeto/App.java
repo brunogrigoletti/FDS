@@ -1,6 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
+        // Comentário inserido no branch 'main'
+
         Carro basico = new Carro("Basico", TipoCombustivel.GASOLINA, 10, 55);
 
         // Adicionando carros...
