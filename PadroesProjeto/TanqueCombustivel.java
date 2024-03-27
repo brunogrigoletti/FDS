@@ -1,5 +1,7 @@
 public class TanqueCombustivel {
 
+    // Comentário inserido no branch 'main'
+
     private TipoCombustivel tipoCombustivel;
     private int capacidade;
     private int combustivelDisponivel;

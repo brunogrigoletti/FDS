@@ -1,5 +1,7 @@
 public class Motor {
 
+    // Comentário inserido no branch 'main'
+
     private TipoCombustivel tipoMotor;
     private int consumo; // em quilometros por unidade. Ex: Km/Lt
     private int quilometragem;

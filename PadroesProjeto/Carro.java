@@ -1,5 +1,7 @@
 public class Carro {
 
+    // Comentário inserido no branch 'main'
+
     private String modelo;
     private Motor motor;
     private TanqueCombustivel tanque;
@@ -10,13 +12,13 @@ public class Carro {
         tanque = new TanqueCombustivel(tipoCombustivel, capacidadeTanque);
     }
 
-    public CarroFlex(String modelo, TipoCombustivel tipoCombustivel, int consumoMotorGas, int consumoMotorAlc, int capacidadeTanque) {
+    /* public CarroFlex(String modelo, TipoCombustivel tipoCombustivel, int consumoMotorGas, int consumoMotorAlc, int capacidadeTanque) {
         this.modelo = modelo;
         motor = new Motor(tipoCombustivel, consumoMotor);
         tanque = abastece(tipoCombustivel,capacidadeTanque);
-    }
+    } */
 
-    public CarroEcono(String modelo, TipoCombustivel tipoCombustivel, int capacidadeTanque) {
+    /* public CarroEcono(String modelo, TipoCombustivel tipoCombustivel, int capacidadeTanque) {
         this.modelo = modelo;
         motor = new Motor(tipoCombustivel, consumoMotor);
         tanque = abastece(tipoCombustivel,capacidadeTanque);
@@ -28,7 +30,7 @@ public class Carro {
                 consumoMotor = motor.getQuilometragem()/5000;
             }
         }
-    }
+    } */
 
     public String getModelo() {
         return modelo;
