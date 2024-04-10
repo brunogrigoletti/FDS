@@ -1,10 +1,10 @@
-package br.pucrs.bruno.laitano.backendspringboot;
+package br.pucrs.bruno.laitano.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackendspringbootApplicationTests {
+class SpringbootApplicationTests {
 
 	@Test
 	void contextLoads() {
