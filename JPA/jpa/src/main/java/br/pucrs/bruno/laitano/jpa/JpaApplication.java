@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages={"br.pucrs.bruno.laitano"})
+
 public class JpaApplication {
 
 	public static void main(String[] args) {

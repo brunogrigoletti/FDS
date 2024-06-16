@@ -1,11 +1,9 @@
 package br.pucrs.bruno.laitano.jpa.persistencia;
-
 import java.util.LinkedList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
-
 
 @Repository
 @Primary
@@ -29,8 +27,9 @@ public class EditoraRepoJpaImpl implements IEditoraRepository {
     }
 
     @Override
-    public Editora getEditoraId(String nome) {
-        Editora editora = repository.findByNome(nome);
+    public Editora getEditoraCodigo(long codigo) {
+        Editora editora = repository.findById(codigo);
         return editora;
     }
+
 }

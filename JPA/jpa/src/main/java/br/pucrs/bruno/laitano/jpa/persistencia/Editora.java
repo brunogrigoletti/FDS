@@ -1,33 +1,35 @@
 package br.pucrs.bruno.laitano.jpa.persistencia;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Editora {
     @Id
+    private long codigo;
     private String nome;
-    private String cidade;
-    private long anoFundacao;
 
-    public Editora(String nome, String cidade, long anoFundacao) {
+    private Editora() {
+    }
+
+    public Editora(long codigo, String nome) {
+        this.codigo = codigo;
         this.nome = nome;
-        this.cidade = cidade;
-        this.anoFundacao = anoFundacao;
+    }
+
+    public long getCodigo() {
+        return this.codigo;
     }
 
     public String getNome() {
-        return nome;
-    }
-    public String getCidade() {
-        return cidade;
-    }
-    public long getAnoFundacao() {
-        return anoFundacao;
+        return this.nome;
     }
 
-    @Override
-    public String toString() {
-        return "Editora [nome=" + nome + ", cidade=" + cidade + ", anoFundacao=" + anoFundacao + "]";
+    public void setCodigo(long codigo) {
+        this.codigo = codigo;
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
 }

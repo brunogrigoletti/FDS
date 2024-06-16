@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 public class Livro {
     @Id
     private long id;
+    @ManyToOne(cascade = CascadeType.REFRESH)
+    private Editora editora;
     private String titulo;
     private String autor;
     private int ano;
@@ -13,8 +15,9 @@ public class Livro {
     protected Livro() {        
     }
 
-    public Livro(long id, String titulo, String autor, int ano) {
+    public Livro(long id, Editora editora, String titulo, String autor, int ano) {
         this.id = id;
+        this.editora = editora;
         this.titulo = titulo;
         this.autor = autor;
         this.ano = ano;
@@ -22,6 +25,10 @@ public class Livro {
 
     public long getId() {
         return id;
+    }
+
+    public Editora getEditora() {
+        return editora;
     }
 
     public String getTitulo() {
@@ -36,8 +43,4 @@ public class Livro {
         return ano;
     }
 
-    @Override
-    public String toString() {
-        return "Livro [id=" + id + ", titulo=" + titulo + ", autor=" + autor + ", ano=" + ano + "]";
-    }
 }

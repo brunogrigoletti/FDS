@@ -4,5 +4,6 @@ import java.util.List;
 
 public interface IEditoraRepository {
     List<Editora> getEditoras();
-    Editora getEditoraId(String nome);
+    Editora getEditoraCodigo(long codigo);
 }
+

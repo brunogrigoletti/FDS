@@ -12,13 +12,9 @@ public class ExemploController {
     private IEditoraRepository editoras;
 
     @Autowired
-    public ExemploController(IAcervoRepository acervo) {
+    public ExemploController(IAcervoRepository acervo, IEditoraRepository editoras) {
         this.acervo = acervo;        
-    }
-
-    @Autowired
-    public ExemploController(IEditoraRepository editoras) {
-        this.editoras = editoras;        
+        this.editoras = editoras;
     }
 
     @GetMapping("")
@@ -39,5 +35,10 @@ public class ExemploController {
     @GetMapping("/editoras")
     public List<Editora> getEditoras() {
         return editoras.getEditoras();
+    }
+
+    @GetMapping("/editoracod/{cod}")
+    public Editora getEditoraCodigo(@PathVariable("cod") long codigo) {
+        return editoras.getEditoraCodigo(codigo);
     }
 }
